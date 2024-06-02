@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Peace Edogun's Data Analytics Portfolio</title>
+<style>
+    body {
+        background-color: #030220; /* dark pink */
+        color: white;
+        font-family: 'Garamond', serif; Geneva, Verdana, sans-serif;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+    #typewriter-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin-top: -150px;
+    }
+
+    #typewriter {
+        font-size: 24px;
+        white-space: pre-line;
+        overflow: hidden;
+        border-right: none; /* Hide the border on the right side */
+    }
+    #options {
+        margin-top: -150px;
+        opacity: 0; /* Initially hidden */
+        animation: slideIn 0.5s ease forwards, bounce 1s ease infinite;
+    }
+    @keyframes slideIn {
+        from { transform: translateY(100%); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+    }
+    @keyframes bounce {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+    }
+
+    #options {
+        display: flex; /* Arrange buttons horizontally */
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap; /* Allow wrapping to new lines */
+    }
+    .option {
+        background-color: #021b40; /* deep blue */
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        margin: 10px;
+        border-radius: 25px; /* Adjust border-radius for capsule shape */
+        transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Added transition for glossy effect */
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Added box shadow for depth */
+        background-image: linear-gradient(to bottom, #021b40, #063f81); /* Gradient for glossy effect */
+    }
+    .option:hover {
+        transform: translateY(-3px); /* Added slight lift on hover */
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5); /* Increased shadow on hover for more depth */
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #161e43; /* hot pink */
+        min-width: 100px;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        z-index: 1;
+        border-radius: 15px;
+        margin-left: 20px;
+    }
+
+    .dropdown-content a {
+        color: white;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        transition: background-color 0.3s ease;
+        border-bottom: 1px solid #090844; /* Add a border bottom */
+    }
+    
+    .dropdown-content a:last-child {
+        border-bottom: none; /* Remove border bottom from the last link */
+    }
+
+    .dropdown-content a:hover {
+        background-color: #32517c;
+        border-radius: 15px; /* 
+        darker hot pink */
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    /* Tooltip styles */
+    .tooltip {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 160px;
+        background-color: #161e43;
+        color: white;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px;
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        left: 50%;
+        margin-left: -80px;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    .tooltip .tooltiptext::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #161e43 transparent transparent transparent;
+    }
+
+    .tooltip:hover .tooltiptext {
+        visibility: visible;
+        opacity: 1;
+    }
+</style>
+</head>
+<body>
+<div id="typewriter-container">
+    <p id="typewriter"></p>
+</div>
+<div id="options" style="animation-delay: 0.5s;"> <!-- Added animation-delay -->
+    <button class="option" onclick="window.open('https://dionamuh.github.io/pyth/', '_blank')">Python</button>
+    <button class="option" onclick="window.open('https://dionamuh.github.io/SQL/', '_blank')">SQL</button>
+    <div class="dropdown">
+        <button class="option">Web Apps</button>
+        <div class="dropdown-content">
+            <a href="https://murami.onrender.com" target="_blank" class="tooltip">Murami
+                <span class="tooltiptext">Get your yearly rent estimate from Murami</span>
+            </a>
+            <a href="https://sibi.onrender.com" target="_blank" class="tooltip">Sibi
+                <span class="tooltiptext">Learn Nigerian Pidgin English from Sibi</span>
+            </a>
+        </div>
+    </div>
+    <button class="option" onclick="openMail()">Contact Me</button>
+</div>
+<script>
+    var text = "Hi there, I am Peace Edogun. \nWelcome to my data analytics portfolio page. \nPlease select the area you are interested in:";
+    var index = 0;
+
+    function typeWriter() {
+        if (index < text.length) {
+            document.getElementById("typewriter").innerHTML += text.charAt(index);
+            index++;
+            setTimeout(typeWriter, 50);
+        }
+    }
+
+    typeWriter();
+</script>
+
+
+<script>
+    function openMail() {
+        window.open('mailto:peaceedogun@gmail.com');
+    }
+</script>
+
+</body>
+</html>
