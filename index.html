@@ -6,9 +6,9 @@
 <title>Peace Edogun's Data Analytics Portfolio</title>
 <style>
     body {
-        background-color: #030220; /* dark pink */
+        background-color: #030220; 
         color: white;
-        font-family: 'Garamond', serif; Geneva, Verdana, sans-serif;
+        font-family: 'Garamond', serif;
         text-align: center;
         margin: 0;
         padding: 0;
@@ -25,11 +25,11 @@
         font-size: 24px;
         white-space: pre-line;
         overflow: hidden;
-        border-right: none; /* Hide the border on the right side */
+        border-right: none; 
     }
     #options {
         margin-top: -150px;
-        opacity: 0; /* Initially hidden */
+        opacity: 0; 
         animation: slideIn 0.5s ease forwards, bounce 1s ease infinite;
     }
     @keyframes slideIn {
@@ -42,33 +42,33 @@
     }
 
     #options {
-        display: flex; /* Arrange buttons horizontally */
+        display: flex; 
         justify-content: center;
         align-items: center;
-        flex-wrap: wrap; /* Allow wrapping to new lines */
+        flex-wrap: wrap; 
     }
     .option {
-        background-color: #021b40; /* deep blue */
+        background-color: #021b40; 
         color: white;
         border: none;
         padding: 10px 20px;
         font-size: 16px;
         cursor: pointer;
         margin: 10px;
-        border-radius: 25px; /* Adjust border-radius for capsule shape */
-        transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Added transition for glossy effect */
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Added box shadow for depth */
-        background-image: linear-gradient(to bottom, #021b40, #063f81); /* Gradient for glossy effect */
+        border-radius: 25px;
+        transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); 
+        background-image: linear-gradient(to bottom, #021b40, #063f81); 
     }
     .option:hover {
-        transform: translateY(-3px); /* Added slight lift on hover */
-        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5); /* Increased shadow on hover for more depth */
+        transform: translateY(-3px); 
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5); 
     }
 
     .dropdown-content {
         display: none;
         position: absolute;
-        background-color: #161e43; /* hot pink */
+        background-color: #161e43; 
         min-width: 100px;
         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
         z-index: 1;
@@ -82,11 +82,11 @@
         text-decoration: none;
         display: block;
         transition: background-color 0.3s ease;
-        border-bottom: 1px solid #090844; /* Add a border bottom */
+        border-bottom: 1px solid #090844; 
     }
     
     .dropdown-content a:last-child {
-        border-bottom: none; /* Remove border bottom from the last link */
+        border-bottom: none; 
     }
 
     .dropdown-content a:hover {
@@ -143,7 +143,7 @@
 <div id="typewriter-container">
     <p id="typewriter"></p>
 </div>
-<div id="options" style="animation-delay: 0.5s;"> <!-- Added animation-delay -->
+<div id="options" style="animation-delay: 0.5s;"> 
     <button class="option" onclick="window.open('https://dionamuh.github.io/pyth/', '_blank')">Python</button>
     <button class="option" onclick="window.open('https://dionamuh.github.io/SQL/', '_blank')">SQL</button>
     <div class="dropdown">
@@ -157,7 +157,26 @@
             </a>
         </div>
     </div>
+   
+    <div class="dropdown">
+        <button class="option">My Viz'</button>
+        <div class="dropdown-content">
+            <a href="https://lagos-markets.onrender.com/" target="_blank" class="tooltip">Markets
+                <span class="tooltiptext">Lagos Markets among the stars - HTML</span>
+            </a>
+            <a href="https://drive.google.com/file/d/1TYguihbfwRkhim2FqsnOp5D823lZCmwq/view?usp=sharing" target="_blank" class="tooltip">Investment
+                <span class="tooltiptext">Investment dashboard Excel on Google Drive</span>
+            </a>
+            <a href="https://public.tableau.com/views/SupplyChain_17066175898010/SupplyChain?:language=en-GB&:sid=&:display_count=n&:origin=viz_share_link" target="_blank" class="tooltip">Supply Chain
+                <span class="tooltiptext">Supply chain dashboard on Tableau</span>
+            </a>
+            <a href="https://public.tableau.com/views/test1_17062298117580/ANALYTICSDASHBOARD2?:language=en-GB&:sid=&:display_count=n&:origin=viz_share_link" target="_blank" class="tooltip">Human Resource
+                <span class="tooltiptext">HR dashboard on Tableau</span>
+            </a>
+        </div>
+    </div>
     <button class="option" onclick="openMail()">Contact Me</button>
+    
 </div>
 <script>
     var text = "Hi there, I am Peace Edogun. \nWelcome to my data analytics portfolio page. \nPlease select the area you are interested in:";
