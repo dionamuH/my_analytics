@@ -122,7 +122,8 @@
 
     .tooltip .tooltiptext {
         visibility: hidden;
-        max-width: 300px;
+        max-width: 700px;
+        font-size: 14px;
         background-color: #090525;
         color: white;
         text-align: center;
@@ -136,6 +137,7 @@
         transition: opacity 0.3s;
         transform: translateY(-40%);
     }
+
     .tooltip .tooltiptext::after {
         content: "";
         position: absolute;
@@ -150,6 +152,10 @@
     .tooltip:hover .tooltiptext {
         visibility: visible;
         opacity: 1;
+    }
+
+    .red-tooltip .tooltiptext {
+        color: red; /
     }
 </style>
 </head>
